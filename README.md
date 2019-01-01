@@ -69,7 +69,7 @@ var routes = new Routes() {
 };
 
 /*
-StaticServer takes 3 optional arguments: Routes routes (to override the static file response, int parentDirectories (to specify how many directories above the current one to start searching for files), and string anchor (default is "index.html"; the file that will be served at "/"). If a route is not specified in routes, then the file that is specified will be served, and if it doesn't exist then the callback will return a 404.
+StaticServer takes 3 optional arguments: Routes routes (to override the static file response), int parentDirectories (to specify how many directories above the current one to start searching for files), and string anchor (default is "index.html"; the file that will be served at "/"). If a route is not specified in routes, then the file that is specified will be served, and if it doesn't exist then the callback will return a 404.
 */
 server.StaticServer(routes: routes, parentDirectories: 1, anchor: "someDefaultFile.html");
 
@@ -78,7 +78,7 @@ RouteServer only serves the routes specified, and returns a 404 if the route is 
 */
 server.RouteServer(routes);
 ```
-Here is an example of a fully-function HTTP server listening on 127.0.0.1 and localhost.
+Here is an example of a fully-functional HTTP server listening on 127.0.0.1 and localhost.
 ```cs
 using System;
 using Vitesse;
