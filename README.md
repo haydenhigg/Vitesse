@@ -1,6 +1,6 @@
 # Vitesse
 
-Vitesse is an easy-to-use, succinct web framework for C# developed out of the need for easy, reliable HTTP hosting.
+Vitesse is an easy-to-use, succinct web framework for C#.
 
 ## Getting Started
 
