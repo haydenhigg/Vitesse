@@ -68,6 +68,7 @@ namespace Vitesse
     public class Client
     {
         private static HttpClient client = new HttpClient();
+        
         public static async Task<string> GetAsync(string url)
         {
             return await client.GetStringAsync(url);
