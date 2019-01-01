@@ -741,6 +741,7 @@ namespace ServerUtil
             {"zip", "application/zip"},
             {"zmm", "application/vnd.handheld-entertainment+xml"}
         };
+        
         public static string MimeType(string fileEnding)
         {
             if (mimeTypes.ContainsKey(fileEnding))
