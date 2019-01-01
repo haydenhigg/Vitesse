@@ -165,7 +165,6 @@ namespace Vitesse
                     {
                         Log("Redirecting to " + userRes.Redirect, userRes.StatusCode);
 
-                        response.StatusCode = userRes.StatusCode;
                         response.Redirect(userRes.Redirect);
 
                         response.OutputStream.Close();
