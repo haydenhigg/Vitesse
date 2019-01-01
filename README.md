@@ -6,7 +6,7 @@ Vitesse is an easy-to-use, succinct web framework for C# developed out of the ne
 
 While in your project directory, do
 ```bash
-git clone <url>
+git clone https://github.com/haydenhigg/Vitesse
 ```
 in the command line.
 
