@@ -97,7 +97,7 @@ namespace Vitesse
         int Port;
         HttpListener Listener = new HttpListener();
 
-        bool Logging = true;
+        public bool Logging = true;
 
         private void Log(string output, int statusCode = 0)
         {
