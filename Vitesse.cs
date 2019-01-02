@@ -252,7 +252,7 @@ namespace Vitesse
         {
             return request => {
                 if (request.Method != "GET") {
-                    Error("Request method is not GET", 501);
+                    Error("Request method is not GET for requested page " + request.Path, 501);
                     return new Response(body: PageCreator.Error(501), status: 501, contentType: "text/html");
                 }
 
