@@ -27,6 +27,8 @@ namespace Vitesse
         public string Method;
 
         public string ClientAddress;
+        
+        public string postBody;
 
         public Request(HttpListenerRequest request) {
             this.Path = request.Url.AbsolutePath.ToString();
@@ -35,6 +37,11 @@ namespace Vitesse
             this.RawUrl = request.RawUrl.ToString();
             this.Method = request.HttpMethod.ToString();
             this.ClientAddress = request.RemoteEndPoint.ToString().Split(':')[0];
+            
+            using (var reader = new StreamReader(request.InputStream, request.ContentEncoding))
+            {
+                this.postBody = reader.ReadToEnd();
+            }
         }
     }
 
@@ -251,11 +258,6 @@ namespace Vitesse
         public ServerCallback StaticServer(Routes routes = null, int parentDirectories = 0, string anchor = "index.html")
         {
             return request => {
-                if (request.Method != "GET") {
-                    Error("Request method is not GET for requested page " + request.Path, 501);
-                    return new Response(body: PageCreator.Error(501), status: 501, contentType: "text/html");
-                }
-
                 routes = routes ?? new Routes();
 
                 if (routes.ContainsKey(request.Path))
@@ -265,6 +267,11 @@ namespace Vitesse
                 }
                 else
                 {
+                    if (request.Method != "GET") {
+                        Error("Request method is not GET for requested page " + request.Path, 501);
+                        return new Response(body: PageCreator.Error(501), status: 501, contentType: "text/html");
+                    }
+                    
                     try
                     {
                         StringBuilder pathPrefix = new StringBuilder();
