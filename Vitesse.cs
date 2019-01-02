@@ -126,6 +126,7 @@ namespace Vitesse
             }
 
             this.ServingURL = "http://" + host + ":" + port.ToString() + "/";
+            this.Host = host;
             this.Port = port;
 
             this.Listener.Prefixes.Add(this.ServingURL);
