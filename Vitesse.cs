@@ -153,7 +153,7 @@ namespace Vitesse
                     catch (Exception e)
                     {
                         Error(e.ToString(), 500);
-                        userRes = new Response(body: File.ReadAllText("defaultError.html"), status: 500, contentType: "text/html");
+                        userRes = new Response(body: File.ReadAllText("Vitesse/defaultError.html"), status: 500, contentType: "text/html");
                     }
 
                     response.ContentType = userRes.ContentType;
@@ -302,7 +302,7 @@ namespace Vitesse
                         catch (ArgumentException)
                         {
                             Error("Could not create error page", 500);
-                            return new Response(body: File.ReadAllText("defaultError.html"), status: 500, contentType: "text/html");
+                            return new Response(body: File.ReadAllText("Vitesse/defaultError.html"), status: 500, contentType: "text/html");
                         }
                     }
                 }
@@ -332,7 +332,7 @@ namespace Vitesse
                     catch (ArgumentException)
                     {
                         Error("Could not create error page", 500);
-                        return new Response(body: File.ReadAllText("defaultError.html"), status: 500, contentType: "text/html");
+                        return new Response(body: File.ReadAllText("Vitesse/defaultError.html"), status: 500, contentType: "text/html");
                     }
                 }
             };
