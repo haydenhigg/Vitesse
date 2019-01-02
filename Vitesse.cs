@@ -28,7 +28,7 @@ namespace Vitesse
 
         public string ClientAddress;
         
-        public string postBody;
+        public string PostBody;
 
         public Request(HttpListenerRequest request) {
             this.Path = request.Url.AbsolutePath.ToString();
@@ -40,7 +40,7 @@ namespace Vitesse
             
             using (var reader = new StreamReader(request.InputStream, request.ContentEncoding))
             {
-                this.postBody = reader.ReadToEnd();
+                this.PostBody = reader.ReadToEnd();
             }
         }
     }
