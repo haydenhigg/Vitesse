@@ -101,6 +101,7 @@ namespace Vitesse
     public class Server
     {
         string ServingURL;
+        string Host;
         int Port;
         HttpListener Listener = new HttpListener();
 
