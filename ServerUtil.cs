@@ -39,22 +39,22 @@ namespace ServerUtil
     public class Convert
     {
         private static Dictionary<int, string[]> statusCodes = new Dictionary<int, string[]>() {
-            {200, new string[] {"ok", "Good request."}},
-            {202, new string[] {"accepted", "The server received the request but has not yet finished processing."}},
-            {203, new string[] {"partial information", "Received metadata is unacceptable or unreadable."}},
-            {204, new string[] {"no response", "The server did not respond."}},
-            {400, new string[] {"bad request", "Your request was not in the proper form (or was otherwise inherently unreadable)."}},
-            {401, new string[] {"unauthorized", "Retry with proper authorization."}},
-            {403, new string[] {"forbidden", "You don't have access to this page."}},
-            {404, new string[] {"not found", "The server couldn't find the page you requested."}},
-            {500, new string[] {"internal error", "The server could not complete the request."}},
-            {501, new string[] {"not implemented", "The server doesn't provide the functionality requested."}},
-            {502, new string[] {"bad gateway", "An external server resource has not responded."}},
-            {503, new string[] {"service temporarily overloaded", "The server has too much traffic right now."}},
-            {504, new string[] {"gateway timeout", "The server was waiting for a response from another webpage that could not be completed."}},
-            {301, new string[] {"moved", "The page you requested has been moved to a different URL."}},
-            {302, new string[] {"found", "The requested resource was found at a different URL."}},
-            {303, new string[] {"method", "Retry with a different method."}}
+            {200, new string[] {"OK", "Good request."}},
+            {202, new string[] {"Accepted", "The server received the request but has not yet finished processing."}},
+            {203, new string[] {"Partial Information", "Received metadata is unacceptable or unreadable."}},
+            {204, new string[] {"No Response", "The server did not respond."}},
+            {400, new string[] {"Bad Request", "Your request was not in the proper form (or was otherwise inherently unreadable)."}},
+            {401, new string[] {"Unauthorized", "Retry with proper authorization."}},
+            {403, new string[] {"Forbidden", "You don't have access to this page."}},
+            {404, new string[] {"Not Found", "The server couldn't find the page you requested."}},
+            {500, new string[] {"Internal Error", "The server could not complete the request."}},
+            {501, new string[] {"Not Implemented", "The server doesn't provide the functionality requested."}},
+            {502, new string[] {"Bad Gateway", "An external server resource has not responded."}},
+            {503, new string[] {"Service Temporarily Overloaded", "The server has too much traffic right now."}},
+            {504, new string[] {"Gateway Timeout", "The server was waiting for a response from another webpage that could not be completed."}},
+            {301, new string[] {"Moved", "The page you requested has been moved to a different URL."}},
+            {302, new string[] {"Found", "The requested resource was found at a different URL."}},
+            {303, new string[] {"Method", "Retry with a different method."}}
         };
         private static Dictionary<string, string> mimeTypes = new Dictionary<string, string>() {
             {"x3d", "application/vnd.hzn-3d-crossword"},
