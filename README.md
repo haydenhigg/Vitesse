@@ -52,7 +52,7 @@ var res = new Response(body: "Hello world!", contentType: "text/plain");
 ```
 
 #### Request object
-There is little need to create one of these, but it's the argument type of Vitesse.ServerCallback, so the accessible members of it are: string Path, which if one were to access "http://127.0.0.1:8080/testDirectory/a/b/c" (our server that we initialized earlier), for example, would be "/testDirectory/a/b/c"; System.Collections.Specialized.NameValueCollection Query, which is the NameValueCollectoin of pairs of GET query parameters, and if one were to access "http://127.0.0.1:8080/anything?a=17&b=hello", for example, it would be something like {"a" => "17", "b" => "hello"}; string Url is the accessed URL; string RawUrl is used for proxies where you can get the Url that the client is trying to access; string Method is the HTTP method used (like "GET" or "POST").
+There is little need to create one of these, but it's the argument type of Vitesse.ServerCallback, so the accessible members of it are: string Path, which if one were to access "http://127.0.0.1:8080/testDirectory/a/b/c" (our server that we initialized earlier), for example, would be "/testDirectory/a/b/c"; System.Collections.Specialized.NameValueCollection Query, which is the NameValueCollectoin of pairs of GET query parameters, and if one were to access "http://127.0.0.1:8080/anything?a=17&b=hello", for example, it would be something like {"a" => "17", "b" => "hello"}; string Url is the accessed URL; string RawUrl is used for proxies where you can get the Url that the client is trying to access; string Method is the HTTP method used (like "GET" or "POST"); string PostBody is the body from a POST request.
 
 #### ServerCallback
 A delegate type. You can either use the lambda syntax directly:
