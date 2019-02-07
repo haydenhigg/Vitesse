@@ -1,3 +1,5 @@
+<img src="https://higgy.s3.amazonaws.com/images/v_italic.jpg" alt="can't display image" width="110"></img>
+
 # Vitesse
 
 Vitesse is an easy-to-use, succinct web framework for C#.
