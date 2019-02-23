@@ -164,6 +164,8 @@ namespace Vitesse
                         Error(e.ToString(), 500);
                         userRes = new Response(body: File.ReadAllText("Vitesse/defaultError.html"), status: 500, contentType: "text/html");
                     }
+                    
+                    userRes.Headers.Add("Content-Type", userRes.ContentType);
 
                     response.ContentType = userRes.ContentType;
                     response.StatusCode = userRes.StatusCode;
